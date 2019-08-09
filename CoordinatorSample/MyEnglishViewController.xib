@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyEnglishViewController" customModule="CoordinatorSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="4zh-4h-KLe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-J6-uPw">
+                    <rect key="frame" x="36" y="76" width="342" height="116"/>
+                    <color key="backgroundColor" red="0.41443013719999999" green="0.73812166020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="342" id="9Jk-q9-cVy"/>
+                        <constraint firstAttribute="height" constant="116" id="bbE-bV-VGW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="Dialog 1">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="dialogTap:" destination="-1" eventType="touchUpInside" id="j5m-2A-7hQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-Pr-nA4">
+                    <rect key="frame" x="36" y="217" width="342" height="116"/>
+                    <color key="backgroundColor" red="1" green="0.65839457150000003" blue="0.236880486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="342" id="CB2-H7-hbh"/>
+                        <constraint firstAttribute="height" constant="116" id="Xpv-68-dO4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="Dialog 2">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="dialogTap:" destination="-1" eventType="touchUpInside" id="G4V-9m-TrW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tJc-Pr-nA4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="00X-yd-ksI"/>
+                <constraint firstItem="fbk-J6-uPw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="37K-iO-4Zs"/>
+                <constraint firstItem="fbk-J6-uPw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fId-Kr-LVb"/>
+                <constraint firstItem="tJc-Pr-nA4" firstAttribute="top" secondItem="fbk-J6-uPw" secondAttribute="bottom" constant="25" id="wlB-in-Num"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+</document>
