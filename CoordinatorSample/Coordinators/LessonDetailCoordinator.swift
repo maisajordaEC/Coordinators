@@ -11,7 +11,8 @@ import UIKit
 class LessonDetailCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var lessonDetailVC: LessonDetailScreen?
-    private var dialogId: Int?
+    var rootDialogId: Int?
+    private var lessonPlanDialogId: Int?
     private var lessonPlanCoordinator: LessonPlanCoordinator?
     
     init(presenter: UINavigationController) {
@@ -19,20 +20,19 @@ class LessonDetailCoordinator: Coordinator {
     }
     
     func start() {
-        let lessonDetailVC  = LessonDetailScreen()
-        
-        self.lessonDetailVC = lessonDetailVC
-        presenter .pushViewController(lessonDetailVC, animated: true)
+        // Create Lesson Detail screen:
+        self.lessonDetailVC  = LessonDetailScreen()
+        self.lessonDetailVC?.delegate = self
+        presenter .pushViewController(self.lessonDetailVC!, animated: true)
     }
 }
 
 extension LessonDetailCoordinator: LessonDetailScreenDelegate {
     func didTapLessonPlan(forDialogId dialogId: Int) {
-        self.dialogId = dialogId
+        self.lessonPlanDialogId = dialogId
         
-        let lessonPlanCoordinator = LessonPlanCoordinator(presenter: presenter, dialogId: dialogId)
-        lessonPlanCoordinator.start()
-        
-        self.lessonPlanCoordinator = lessonPlanCoordinator
+        // Create lesson plan Coordinator
+        self.lessonPlanCoordinator = LessonPlanCoordinator(presenter: presenter, dialogId: dialogId, rootDialogId: rootDialogId ?? 0)
+        lessonPlanCoordinator?.start()
     }
 }

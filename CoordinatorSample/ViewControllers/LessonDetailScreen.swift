@@ -13,10 +13,16 @@ protocol LessonDetailScreenDelegate {
 }
 class LessonDetailScreen: UIViewController {
     
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    
     var delegate: LessonDetailScreenDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Lesson detail"
+        button1.titleLabel?.textAlignment = .center
+        button2.titleLabel?.textAlignment = .center
     }
     
     @IBAction func didTapLessonPlan(_ sender: Any) {

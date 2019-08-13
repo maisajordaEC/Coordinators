@@ -18,8 +18,7 @@ class MyEnglishViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("MyEnglishViewController")
+        self.title = "My English"
     }
     
     @IBAction func dialogTap(_ sender: Any) {

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LessonDetailScreen" customModule="CoordinatorSample" customModuleProvider="target">
             <connections>
+                <outlet property="button1" destination="5Ha-xk-Qtw" id="8i2-hj-YkI"/>
+                <outlet property="button2" destination="IHp-oU-IsA" id="Jv5-n5-3ZJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="txz-54-krI"/>
             </connections>
         </placeholder>
@@ -23,7 +25,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5Ha-xk-Qtw">
                     <rect key="frame" x="36" y="110" width="342" height="116"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.41443013719999999" green="0.73812166020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.015686274510000001" green="0.60392156860000001" blue="0.015686274510000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="Dialog 1   Lesson Plan">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,7 +37,7 @@
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IHp-oU-IsA">
                     <rect key="frame" x="36" y="244" width="342" height="116"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.65839457150000003" blue="0.236880486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.60784313729999995" green="0.1058823529" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="Dialog 2   Lesson Plan">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

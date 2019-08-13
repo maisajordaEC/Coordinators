@@ -102,6 +102,30 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		BB2207CF23028CCA0078BDE1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBC76D6522FC6367009FFDAB /* ViewController.swift */,
+				BB1EE48B22FD48D70032D12B /* TabbarViewController.swift */,
+				BB1EE49622FD5BB60032D12B /* MyEnglishViewController.swift */,
+				BB1EE49E22FD7B030032D12B /* DialogDetailVC.swift */,
+				BB1EE4A822FD88DC0032D12B /* LessonDetailScreen.swift */,
+				BB1EE4AE22FD8B020032D12B /* LessonPlanVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB2207D023028CEB0078BDE1 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				BB1EE49422FD5B940032D12B /* MyEnglishViewController.xib */,
+				BB1EE4A022FD7B0F0032D12B /* DialogDetailVC.xib */,
+				BB1EE4AA22FD88F30032D12B /* LessonDetailScreen.xib */,
+				BB1EE4AC22FD8AF70032D12B /* LessonPlanVC.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		BBC76D5722FC6367009FFDAB = {
 			isa = PBXGroup;
 			children = (
@@ -123,18 +147,10 @@
 		BBC76D6222FC6367009FFDAB /* CoordinatorSample */ = {
 			isa = PBXGroup;
 			children = (
-				BB1EE48D22FD4A950032D12B /* Coordinators */,
 				BBC76D6322FC6367009FFDAB /* AppDelegate.swift */,
-				BBC76D6522FC6367009FFDAB /* ViewController.swift */,
-				BB1EE48B22FD48D70032D12B /* TabbarViewController.swift */,
-				BB1EE49622FD5BB60032D12B /* MyEnglishViewController.swift */,
-				BB1EE49422FD5B940032D12B /* MyEnglishViewController.xib */,
-				BB1EE49E22FD7B030032D12B /* DialogDetailVC.swift */,
-				BB1EE4A022FD7B0F0032D12B /* DialogDetailVC.xib */,
-				BB1EE4A822FD88DC0032D12B /* LessonDetailScreen.swift */,
-				BB1EE4AA22FD88F30032D12B /* LessonDetailScreen.xib */,
-				BB1EE4AE22FD8B020032D12B /* LessonPlanVC.swift */,
-				BB1EE4AC22FD8AF70032D12B /* LessonPlanVC.xib */,
+				BB1EE48D22FD4A950032D12B /* Coordinators */,
+				BB2207CF23028CCA0078BDE1 /* ViewControllers */,
+				BB2207D023028CEB0078BDE1 /* XIB */,
 				BBC76D6D22FC6368009FFDAB /* Assets.xcassets */,
 				BBC76D6F22FC6368009FFDAB /* LaunchScreen.storyboard */,
 				BBC76D7222FC6368009FFDAB /* Info.plist */,

@@ -9,8 +9,7 @@
 import UIKit
 
 class DialogDetailCoordinator: Coordinator {
-    private let presenter: UINavigationController
-    private var dialogVC: DialogDetailVC?
+    private var presenter: UINavigationController
     private var dialogId: Int?
     private var lessonDetailCoordinator: LessonDetailCoordinator?
     
@@ -20,19 +19,29 @@ class DialogDetailCoordinator: Coordinator {
     }
     
     func start() {
+        // Create dialog detail View Controller
         let dialogDetailVC  = DialogDetailVC()
         dialogDetailVC.delegate = self
         dialogDetailVC.dialogId = self.dialogId ?? 0
-        self.dialogVC = dialogDetailVC
-        //presenter.present(dialogDetailVC, animated: true, completion: nil)
-        presenter .pushViewController(dialogDetailVC, animated: true)
+        
+        // Create navigation controller to present modally:
+        let dialogNavController = UINavigationController.init(rootViewController: dialogDetailVC)
+        self.presenter.present(dialogNavController, animated: true, completion: {
+            self.presenter = dialogNavController
+            // Remove previous dialog's navigation stack here
+        })
     }
 }
 
 extension DialogDetailCoordinator: DialogDetailVCDelegate {
+    func dismiss() {
+        self.presenter .dismiss(animated: true, completion: nil)
+    }
+    
     func didTapGoLive() {
-        let lessonDetailCoordinator = LessonDetailCoordinator(presenter: presenter)
-        self.lessonDetailCoordinator = lessonDetailCoordinator
-        lessonDetailCoordinator.start()
+        // Create lesson detail coordinator
+        self.lessonDetailCoordinator = LessonDetailCoordinator(presenter: presenter)
+        lessonDetailCoordinator?.rootDialogId = dialogId
+        lessonDetailCoordinator?.start()
     }
 }

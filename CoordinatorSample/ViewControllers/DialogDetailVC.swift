@@ -10,6 +10,7 @@ import UIKit
 
 protocol DialogDetailVCDelegate {
     func didTapGoLive()
+    func dismiss()
 }
 
 class DialogDetailVC: UIViewController {
@@ -20,12 +21,15 @@ class DialogDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.dialogLabel.text = "\(dialogId + 1)"
-        print("DialogDetailVC")
+        self.title = "Dialog Detail: \(dialogId+1)"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissScreen))
     }
     
     @IBAction func didTapGoLive(_ sender: Any) {
         delegate?.didTapGoLive()
+    }
+    
+    @objc func dismissScreen(){
+        delegate?.dismiss()
     }
 }

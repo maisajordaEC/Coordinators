@@ -12,15 +12,27 @@ class LessonPlanCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var lessonPlanVC: LessonPlanVC?
     private var dialogId: Int
+    private var rootDialogId: Int
     
-    init(presenter: UINavigationController, dialogId: Int) {
+    init(presenter: UINavigationController, dialogId: Int, rootDialogId: Int) {
         self.presenter = presenter
         self.dialogId = dialogId
+        self.rootDialogId = rootDialogId
     }
     
     func start() {
-        let lessonPlanVC  = LessonPlanVC()
-        self.lessonPlanVC = lessonPlanVC
-        presenter .pushViewController(lessonPlanVC, animated: true)
+        // Create Lesson Plan screen:
+        self.lessonPlanVC  = LessonPlanVC()
+        self.lessonPlanVC?.rootDialogId = rootDialogId
+        self.lessonPlanVC?.dialogId = dialogId
+        self.lessonPlanVC?.delegate = self
+        presenter .pushViewController(self.lessonPlanVC!, animated: true)
+    }
+}
+
+extension LessonPlanCoordinator: LessonPlanVCDelegate {
+    func loadDialogDetail(forDialog dialogId: Int) {
+        let dialogDetailCoordinator = DialogDetailCoordinator.init(presenter: presenter, dialogId: dialogId)
+        dialogDetailCoordinator.start()
     }
 }

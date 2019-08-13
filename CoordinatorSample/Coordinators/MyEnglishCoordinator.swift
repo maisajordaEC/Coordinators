@@ -27,9 +27,8 @@ class MyEnglishCoordinator: Coordinator {
 
 extension MyEnglishCoordinator: MyEnglishViewControllerDelegate {
     func didSelectDialog(withId ID: Int) {
-        let dialogDetailCoordinator = DialogDetailCoordinator.init(presenter: presenter, dialogId: ID)
-        dialogDetailCoordinator.start()
-        
-        self.dialogDetailCoordinator = dialogDetailCoordinator
+        // Create dialog detail coordinator
+        self.dialogDetailCoordinator = DialogDetailCoordinator.init(presenter: presenter, dialogId: ID)
+        dialogDetailCoordinator?.start()
     }
 }

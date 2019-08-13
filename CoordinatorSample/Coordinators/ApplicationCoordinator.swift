@@ -15,12 +15,15 @@ class ApplicationCoordinator: Coordinator {
     
     init(window: UIWindow) {
         self.window = window
+        
+        // Create root view Controller and Tabbar coordinator
         rootViewController = UINavigationController()
         tabbarCoordinator = TabbarCoordinator(presenter: rootViewController)
     }
     
     func start() {
         window.rootViewController = rootViewController
+        // Start tabbarcoordiantor
         tabbarCoordinator.start()
         window.makeKeyAndVisible()
     }

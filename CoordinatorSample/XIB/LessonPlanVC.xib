@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LessonPlanVC" customModule="CoordinatorSample" customModuleProvider="target">
             <connections>
+                <outlet property="dialogButton" destination="gFP-3B-Qq7" id="6pt-Zn-GLv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WpA-tS-XKD"/>
             </connections>
         </placeholder>
@@ -21,9 +22,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gFP-3B-Qq7">
-                    <rect key="frame" x="36" y="82" width="342" height="116"/>
+                    <rect key="frame" x="36" y="110" width="342" height="116"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.41443013719999999" green="0.73812166020000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.015686274510000001" green="0.60392156860000001" blue="0.015686274510000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="Dialog metadata (Tap to go to Dialog details) ">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
