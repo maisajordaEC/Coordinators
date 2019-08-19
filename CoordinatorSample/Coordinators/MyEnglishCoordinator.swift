@@ -22,6 +22,9 @@ class MyEnglishCoordinator: Coordinator {
     func start() {
         // Nothing to do here, myEnglish will automatically load because this is the
         // root viewcontroller
+        
+        // GIT workflow - Testing A
+        // GIT workflow - Testing B
     }
 }
 
