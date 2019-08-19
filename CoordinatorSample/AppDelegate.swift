@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationCoordinator?.start()
         
         // GIT workflow - Testing C
+        // GIT workflow - Testing E
         
         return true
     }
