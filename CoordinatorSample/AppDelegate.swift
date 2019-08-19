@@ -23,9 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationCoordinator = ApplicationCoordinator.init(window: window)
         self.applicationCoordinator?.start()
         
-        // GIT workflow - Testing C
-        // GIT workflow - Testing E
-        
         return true
     }
 }
